@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, Calculator, BookOpen, Users, RefreshCw } from 'lucide-react';
+import { ChevronRight, Calculator, BookOpen, Users, RefreshCw, FileText } from 'lucide-react';
 
 const ServiceCard = ({ title, description, icon: Icon }) => (
   <motion.div 
@@ -82,6 +82,18 @@ const ServicesSection = () => {
       ]
     },
     {
+      title: "Facturación Electrónica",
+      icon: FileText,
+      description: [
+        "Alquiler de sistema de facturación electrónica",
+        "Emisión de comprobantes electrónicos",
+        "Gestión de documentos electrónicos",
+        "Soporte técnico especializado",
+        "Integración con sistemas contables",
+        "Cumplimiento con normativas SUNAT"
+      ]
+    },
+    {
       title: "Asesoría Laboral",
       icon: Users,
       description: [
@@ -128,8 +140,8 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.slice(0, 3).map((service, index) => (
             <ServiceCard
               key={index}
               title={service.title}
@@ -137,6 +149,16 @@ const ServicesSection = () => {
               icon={service.icon}
             />
           ))}
+          <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8 md:w-2/3 mx-auto">
+            {services.slice(3).map((service, index) => (
+              <ServiceCard
+                key={index + 3}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+              />
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>

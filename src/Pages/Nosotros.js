@@ -130,7 +130,7 @@ const AboutUs = () => {
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
   className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-  onClick={() => window.open('https://api.whatsapp.com/send?phone=51932930958&text=Hola%20quiero%20más%20información', '_blank')}
+  onClick={() => window.open('https://wa.me/message/PQNSFAOCWTTIF1', '_blank')}
 >
   <Phone className="w-5 h-5 mr-2" />
   Contactar

@@ -29,7 +29,7 @@ const Home = () => {
           </p>
           
           <motion.a 
-            href="https://wa.me/51962991005?text=Hola,%20estoy%20interesado%20en%20sus%20servicios."
+            href="https://wa.me/message/PQNSFAOCWTTIF1"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg font-semibold"
