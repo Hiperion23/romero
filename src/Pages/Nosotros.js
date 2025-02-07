@@ -109,14 +109,14 @@ const AboutUs = () => {
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">¿Quiere saber más?</h2>
             <p className="text-gray-300 mb-6 text-center">Contácteme hoy mismo para agendar su consulta gratuita.</p>
             <motion.button 
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }} 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Contactar
-          </motion.button>
-        </motion.div>
+  onClick={() => window.open('https://wa.me/message/PQNSFAOCWTTIF1?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios.', '_blank')}
+  whileHover={{ scale: 1.05 }} 
+  whileTap={{ scale: 0.95 }} 
+  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+>
+  <Phone className="w-5 h-5 mr-2" />
+  Contactar
+</motion.button>        </motion.div>
           <form onSubmit={handleSubmit} className="bg-gray-900/80 backdrop-blur-lg border border-gray-800 rounded-2xl p-6">
             <h3 className="text-lg font-semibold text-white mb-4">Déjanos tus datos:</h3>
             {["nombre", "ruc", "razonSocial", "telefono", "correo"].map((field, index) => (
