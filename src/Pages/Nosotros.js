@@ -17,7 +17,14 @@ const AboutUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.href = `mailto:wenramirez712@gmail.com?subject=Nuevo%20Contacto&body=Nombre:%20${formData.nombre}%0A%20RUC:%20${formData.ruc}%0A%20Razón%20Social:%20${formData.razonSocial}%0A%20Teléfono:%20${formData.telefono}%0A%20Correo:%20${formData.correo}`;
+    window.location.href = `mailto:Wilder@contableromero.com?subject=Nuevo%20Contacto&body=Nombre:%20${formData.nombre}%0A%20RUC:%20${formData.ruc}%0A%20Razón%20Social:%20${formData.razonSocial}%0A%20Teléfono:%20${formData.telefono}%0A%20Correo:%20${formData.correo}`;
+    setFormData({
+      nombre: "",
+      ruc: "",
+      razonSocial: "",
+      telefono: "",
+      correo: "",
+    });
   };
 
   const services = [
@@ -113,7 +120,13 @@ const AboutUs = () => {
           <form onSubmit={handleSubmit} className="bg-gray-900/80 backdrop-blur-lg border border-gray-800 rounded-2xl p-6">
             <h3 className="text-lg font-semibold text-white mb-4">Déjanos tus datos:</h3>
             {["nombre", "ruc", "razonSocial", "telefono", "correo"].map((field, index) => (
-              <input key={index} type="text" name={field} placeholder={field.replace(/^\w/, (c) => c.toUpperCase())} className="w-full p-3 mb-3 rounded-lg bg-gray-800 text-white" onChange={handleChange} required />
+              <input key={index} 
+              type="text" 
+              name={field} 
+              placeholder={field.replace(/^\w/, (c) => c.toUpperCase())} 
+              className="w-full p-3 mb-3 rounded-lg bg-gray-800 text-white" 
+              onChange={handleChange}
+              value={formData[field]} required />
             ))}
             <button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg flex items-center justify-center">
               <Send className="w-5 h-5 mr-2" /> Enviar
