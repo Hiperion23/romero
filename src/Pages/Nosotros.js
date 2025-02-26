@@ -17,7 +17,7 @@ const AboutUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.href = `mailto:Wilder@contableromero.com?subject=Nuevo%20Contacto&body=Nombre:%20${formData.nombre}%0A%20RUC:%20${formData.ruc}%0A%20Razón%20Social:%20${formData.razonSocial}%0A%20Teléfono:%20${formData.telefono}%0A%20Correo:%20${formData.correo}`;
+    window.location.href = `mailto:romerowider893@gmail.com?subject=Nuevo%20Contacto&body=Nombre:%20${formData.nombre}%0A%20RUC:%20${formData.ruc}%0A%20Razón%20Social:%20${formData.razonSocial}%0A%20Teléfono:%20${formData.telefono}%0A%20Correo:%20${formData.correo}`;
     setFormData({
       nombre: "",
       ruc: "",
@@ -109,11 +109,11 @@ const AboutUs = () => {
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">¿Quiere saber más?</h2>
             <p className="text-gray-300 mb-6 text-center">Contácteme hoy mismo para agendar su consulta gratuita.</p>
             <motion.button 
-  onClick={() => window.open('https://wa.me/message/PQNSFAOCWTTIF1?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios.', '_blank')}
-  whileHover={{ scale: 1.05 }} 
-  whileTap={{ scale: 0.95 }} 
-  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
->
+                onClick={() => window.open('https://wa.me/message/PQNSFAOCWTTIF1?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios.', '_blank')}
+                whileHover={{ scale: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+            >
   <Phone className="w-5 h-5 mr-2" />
   Contactar
 </motion.button>        </motion.div>
